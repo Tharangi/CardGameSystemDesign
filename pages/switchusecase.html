@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">3.1.2. Use Case Diagram for Switch Card Game</h1>
+						<br/>
+						<p align="justify">Use case diagram for Switch card game is as follows:</p>
+						<br/>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/SwichUseCaseDiagram.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 3.1.2, View full size image<a href="img/SwichUseCaseDiagram.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>New Switch Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play a new Switch game, so that I can play a new Switch card game.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Shuffle Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a dealer-player, I should be able to shuffle the cards so that I can make sure that cards are mixed.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Deal Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a dealer-player, I should be able to deal similar sized hand of cards to players, so that I can ensure that everyone has got similar number of cards.</p>
+							<ul>
+								<li>Players should initially deal a similar sized hand of cards and by standard it should be 7 per person, but it can vary upon the number of players.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Place Drawing Stack Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As the game system, I should be able to place the remainder of the deck face down to serve as drawing stack, so that I can place the remainder of the deck to serve as a ‘pool’ or drawing stack.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Start the Discard Pile Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to reveal the top most card from the drawing stack, so that I can start the discard pile and begin the play.</p>
+							<h5><u>Acceptance criteria:</u></h5>
+							<ul>
+								<li>Starting card should not be an Ace, if the "starting card" is an Ace, cards shall continue to be selected from the pool until a non-Ace card is revealed.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Validate Start Card is Not an ‘Ace’ Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As the game system, I should be able to validate, “starting card” is not an Ace, so that I can maintain the game rules.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As the first player - player on the dealer's left, I should be able to select a card from my hand that matches either, the suit or the rank of the open card, the card that is "top" or if I am not able to place a card and I do not have an Ace, then I should be able to draw a single card from the deck, so that I can play my turn.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Draw Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, if I do not have a card in my deck that matches either, the suit or the rank of the open card, then I should be able to draw a single card from the deck, so that I can play my turn.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Ace Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play Ace regardless of the suit or value of the topmost card on the playing deck, so that I can play Ace anytime in the game.</p>
+							<h5><u>Acceptance criteria:</u></h5>
+							<ul>
+								<li>Player can decide freely the suit that has to be played next and from then on, play continues as normal, but on the suit selected by the player of the Ace.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Make New Drawing Stack Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, if the drawing stack is run down and becomes empty, the playing stack or discard pile except for the topmost card is shuffled, then I should be able to place down to form a new ‘pool’, so that I can form a new drawing stack.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>End Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, when all the players get rid of their cards I should be able to end the game, so that I can end the game.</p>
+							<h3><small>Winning the game scenario:</small></h3>
+							<p align="justify">As a player, I should be able to win the game as soon as I play my last card, so that I can win the game.</p>
+							<h5><u>Acceptance criteria:</u></h5>
+							<ul>
+								<li>If the last card is a power card they must draw another card as a game can not end with an power card.</li>
+							</ul>
+							<p align="justify">Power cards/ Trick cards: 2, 8, King, Black Jack, Red Jack, Ace ( Refer Requirements Statement for Switch Card Game)</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>View Score Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, once the game ended I should be able to view the scores of players, so that I can improve playing switch card game.</p>
+							<h5>Once the game is ended two options should pop-up,</h5>
+							<ul>
+								<li>Quit</li>
+								<li>View scores</li>
+							</ul>
+						</div>
+						<br/>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

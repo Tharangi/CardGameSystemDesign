@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Requirement Statement for Card Game System</h1>
+						<br/>
+						<p align="justify">The software to be designed is a software system for playing card games and this system consists of two popular card games; Switch and Basic Rummy.</p>
+						<br/>
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4">
+								<div class="thumbnail">
+									<img src="img/cards.jpg" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 2.1, Source:<a href="http://www.rgbstock.com/bigphoto/2dASAN6/Card+Pack"> www.rgbstock.com</a>)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						<p align="justify">A card deck consists of 52 individual cards and each card has a suit and a value as given in the following sets.</p>
+							<blockquote>
+                                <pre>Suit = {Diamonds, Hearts, Spades, Clubs}
+Value = {A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, K, Q}
+A, J, K, Q has special names as Ace, Jack, King and Queen respectively.</pre>
+                            </blockquote>
+						<p align="justify">There can be one or more players and each player is given a hand of cards assigned to the player where hand is the set of cards assigned to a player. Number of cards given for a hand is differ from one game to another. Players should perform actions such as lay one or more cards on the table, discard one or more cards, put one or more cards back in the deck in each turn.Each game has a set of rules for moving cards and winning strategy.</p>
+						<p align="justify">Below you can find the requirements descriptively explained on Switch and Basic Rummy card games.</p>
+						<br/><br/>
+						<h4><strong>Requirement Statement for Switch Card Game</strong></h4>
+						<br/>
+						<p align="justify">Switch card game, also known as Two Four Jacks, Black Jack and Irish Switch is a shedding type card game.</p>
+						<p align="justify">Switch card game is played with a regular, single deck of playing cards or if there are large number of players with two standard decks shuffled into one. Each player at his turn may play any card from his hand that matches the suit or the rank of the card previously played.</p>
+						<h5>Game play is as following;</h5>
+							<ul>
+								<li>Players are initially dealt a similar sized hand of cards, often seven per person, but the exact number may vary depending on how many players are present.</li>
+								<li>The remainder of the deck is placed face down and serve as a "pool" or drawing stack. </li>
+								<li>At the beginning of the game the topmost card from the "pool" is revealed and, so long as this card is not an Ace, play begins. Switch may not start with an Ace, and so if the "starting card" is an Ace, cards shall continue to be selected from the pool until a non-Ace card is revealed.</li>
+								<li>The first to play, generally, the player on the dealer's left should select from his or her hand a card that matches either, the suit or the rank of the open card, the card that is "top"; for example, on a 9 of spades, only a spade card or a 9 may be played. If a player is not able to place a card and the player does not have an Ace, he draws a single card from the stack.</li>
+								<li>If the drawing stack is run down and becomes empty, the playing stack or discard pile (except for the topmost card) is shuffled, and placed face down to become the new "pool." </li>
+								<li>Ace: can be played regardless of the suit or value of the topmost card on the playing deck—that is, the Ace may be played at any time in the game. When playing an Ace, the player can decide freely the suit that has to be played next; from then on, play continues as normal, but on the suit selected by the player of the Ace.</li>
+							</ul>
+						<h5>In Switch some cards are known as "power" or "trick" cards, because they are being played directly affects the gameplay:</h5>
+							<ul>
+								<li>2: if a player places a two (of any suit) down, the next player is required to pick up two cards. Should that player have a two himself, however, he may place it down, requiring the next player to pick up four; if he has a two, he may place it, requiring the next player to pick up six; this may continue until the flow reaches a player who does not have a two in his hand, at which point he is required to pick up the required number of cards. A player that draws cards after a two has been played is usually not permitted to put any more cards down.</li>
+								<li>8: the next player misses their turn. There is not usually the option for the next player to play an 8 if she has any, as there is with the 2; however, if this rule is included, then 8s will continue to be played, until the flow reaches a player without an 8, in which case he will miss a number of turns equivalent to the number of 8s played immediately previously.</li>
+								<li>King: king reverses the play direction</li>
+								<li>Black Jack: When the Black Jack is played, the following player must pick up the same amount of cards dealt or play another Black Jack and the following player must then pick up double that. If you have both Black Jacks then you can play both of them at the same time, to then cause the next person to pick up.</li>
+								<li>Red Jack: Is best played when a Black Jack is played as this will cancel the pick up black jack rule. One red Jack cancels one black jack.</li>
+								<li>Ace: can be played regardless of the suit or value of the topmost card on the playing deck—that is, the Ace may be played at any time in the game. When playing an Ace, the player can decide freely the suit that has to be played next; from then on, play continues as normal, but on the suit selected by the player of the Ace.</li>
+							</ul>
+						<p align="justify">If a player has a 10, they can place any card of the same suit down, but from then it must carry on in order. For example, 10 of hearts is placed, then you can put down a 7 of hearts. However, after this you have to put down an eight if hearts, or a six of hearts, or a 7 of a different suit, or move on to the next player.</p>
+						<p align="justify">When a player has only one remaining card they must remember to call last card (by saying last card aloud) before their turn has ended, to inform the other players that they are about to win. Should a player who has graduated to last card fail to call before the end of the turn in which they reach last card (that is, once the next player has started her turn after the last-card player has put down his or her second last card), he may be penalised, often to the cost of picking up one card immediately (over and above any picking up as a matter of routine course in the game).</p>
+						<p align="justify">As soon as a player plays their last card they win the game. If the last card is a power card they must draw another card as a game can not end with an power card. The game can continue until all the players get rid of their cards.</p>
+						<br/><br/>
+						<h4><strong>Requirement Statement for Basic Rummy Card Game</strong></h4>
+						<br/>
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4">
+								<div class="thumbnail">
+									<img src="img/rummy.jpg" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 2.2, Source:<a href="https://en.wikipedia.org/wiki/Rummy#/media/File:A_Game_of_Rummy.JPG"> Wikipedia</a>)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p align="justify">The game is best played with two to four players, but up to six can take part.  One standard deck of 52 cards is used. Cards in each suit rank, from low to high: Ace 2 3 4 5 6 7 8 9 10 Jack Queen King. 
+The dealer is chosen randomly and the cards are dealt one at a time. In a two player game, each player is dealt a hand of ten cards. Seven cards each are dealt if there are three or four players, and when five or six play each player gets six cards.</p>
+						<p align="justify">After the deal, the next card is placed face up on the table to start the discard pile, and the remainder of the deck is placed face down beside it to form the stock. 
+The players look at and sort their cards.</p>
+						<h5>The object of the game is to dispose of all the cards in your hand. There are three ways to get rid of cards: melding, laying off, and discarding.</h5>
+							<ul>
+								<li><i>Melding</i> is taking a combination of cards from your hand, and placing it face up in front of you on the table, where it stays. There are two kinds of combination which can be melded: sequences (also known as runs) and groups (also known as sets or books).</li>
+									<ul>
+										<li>a sequence or run consists of three or more cards of the same suit in consecutive order.</li>
+										<li>a group, set or book is three or four cards of the same rank</li>
+									</ul>
+								<li><i>Laying off</i> is adding a card or cards from your hand to a meld already on the table. The cards added to a meld must make another valid meld.</li>
+								<li><i>Discarding</i> is playing a card from your hand on top of the discard pile. You get rid of one card this way at the end of each turn.</li>
+							</ul>
+						<br/>
+						<h5><u>Game Rules</u></h5>
+						<p align="justify">If there are two players, they take alternate turns starting with the non dealer. If there are more than two players, they take turns in clockwise rotation, beginning with the player to dealer's left. Each turn consists of the following parts.</p>
+							<ol>
+								<li>The Draw. You must begin by taking one card from either the top of the Stockpile or the top card on the discard pile, and adding it to your hand. The discard pile is face up, so you can see in advance what you are getting. The stock is face down, so if you choose to draw from the stock you do not see the card until after you have committed yourself to take it. If you draw from the stock, you add the card to your hand without showing it to the other players.</li>
+								<li>Melding. If you have a valid group or sequence in your hand, you may lay one such combination face up on the table in front of you. You cannot meld more than one combination in a turn. Melding is optional; you are not obliged to meld just because you can.</li>
+								<li>Laying off. This is also optional. If you wish, you may add cards to groups or sequences previously melded by yourself or others. There is no limit to the number of cards a player may lay off in one turn.</li>
+								<li>The Discard At the end of your turn, one card must be discarded from your hand and placed on top of the discard pile face up. If you began your turn by picking up the top card of the discard pile you are not allowed to end that turn by discarding the same card, leaving the pile unchanged - you must discard a different card. You may however pick up the discard on one turn and discard that same card at a later turn. If you draw a card from the stock, it can be discarded on the same turn if you wish.</li>
+							</ol>
+						<p align="justify">If the stockpile has run out and the next player does not want to take the discard, the discard pile is turned over, without shuffling, to form a new stock, and play continues. A player wins by either melding, laying off, or discarding all of his or her cards. Getting rid of your last card in one of these ways is called going out. As soon as someone goes out, play ceases and that player wins the game.</p>
+					</div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

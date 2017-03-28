@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">3.1.1. Use Cases for Card Game System</h1>
+						<br/>
+						<p align="justify">General use cases of the card game system are identified as follows:</p>
+						<br/>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/GeneralUseCaseDiagram.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 3.1.1, View full size image<a href="img/GeneralUseCaseDiagram.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to log in to the game system, so that I can play the game. There should be a GUI with the options,</p>
+							<ul>
+								<li>User Login</li>
+								<li>Guest Login</li>
+								<li>Register</li>
+							</ul>
+							<p align="justify">for user to select an option to login to the game system.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>User Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a registered user, I should be able to log in to the game system, so that I can play the game. There should be a GUI with the options,</p>
+							<ul>
+								<li>Username</li>
+								<li>Password</li>
+							</ul>
+							<p align="justify">For user to login to the game system. After a successful login, a player should be directed to the Main menu page.</p>
+							<p align="justify">Main menu page will have two options,</p>
+							<ol>
+								<li>Start Game</li>
+								<li>View Scores</li>
+								<li>Quit</li>
+							</ol>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Guest Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to login to the game system without been registered, so that I can play the game. </p>
+							<p align="justify">There should be a GUI with the field to enter the ‘Username’ for user to enter the game system and after a successful login, a player should be directed to the Main menu page.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Validate User Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a system operator, I want login details to be validated, so that I can keep user information accurately.</p>
+							<ul>
+								<li>Password should be equal to the password given for the registered username and username should be a valid one.</li>
+								<li>Username given at a guest checkout must be unique and shouldn’t be conflict with already existing registered username. There can be guest users with same username, but we do not capture their scores or information in our system.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Guest Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to login to the game system without been registered, so that I can play the game. </p>
+							<p align="justify">There should be a GUI with the field to enter the ‘Username’ for user to enter the game system and after a successful login, a player should be directed to the Main menu page.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Register User Login Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to register myself as a player, so that I can play the game while maintaining my records.</p>
+							<p align="justify">There should be a GUI to enter,</p>
+							<ul>
+								<li>Username</li>
+								<li>Password</li>
+								<li>Confirm Password</li>
+								<li>Email</li>
+							</ul>
+							<p align="justify">For a user to register himself. An confirmation email should be sent to the user’s provided email address upon a registration. When the registration is success a pop-up message should show up and should be redirected to login page.</p>
+							<h5><u>Acceptance criteria:</u></h5>
+							<ul>
+								<li>Username should be unique.</li>
+								<li>Email should be a valid email address.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Start Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to start the game by connecting with server, so that I can play the game.</p>
+							<p align="justify">There should be a GUI to enter,</p>
+							<ul>
+								<li>Server name (Dropdown selection)</li>
+								<li>Username</li>
+							</ul>
+							<p align="justify">and options to select,</p>
+							<ul>
+								<li>Join server</li>
+								<li>Host server</li>
+								<li>Start game</li>
+							</ul>
+							<p align="justify">for a player to start the game.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Host Server Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to host a game, so that I can host a new game by myself to play.(Refer Start Game Use Case)</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Join Server Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to join a game, so that I can host a new game by myself to play.(Refer Start Game Use Case)</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play a card game of my preference, so that I can play cards on  my computer.</p>
+							<p align="justify">There should be a GUI to select options,</p>
+							<ul>
+								<li>Play Switch</li>
+								<li>Play Basic Rummy</li>
+							</ul>
+							<p align="justify">for a player to select a game of his choice to play. By clicking on the option should be directed to the game screen.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Switch Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play Switch card game, so that I can play Switch card game on my computer.(Refer Play Game use case)</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Basic Rummy Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play Basic Rummy card game, so that I can play Switch card game on my computer.(Refer Play Game use case)</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>View Scores Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to view my past scores, so that I can play well to increase my scores.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Quit Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to exit the game by disconnecting the connection with the server, so that I can exit the game.</p>
+							<p align="justify">Exit button should show up,</p>
+							<ul>
+								<li>At the end of a game</li>
+								<li>In the main menu</li>
+							</ul>
+						</div>
+						<br/>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

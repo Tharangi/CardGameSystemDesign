@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">3.1.3. Use Cases for Basic Rummy Card Game</h1>
+						<br/>
+						<p align="justify">Use case diagram for Basic Rummy card game is as follows:</p>
+						<br/>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/BasicRummyUseCaseDiagram.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 3.1.3, View full size image<a href="img/BasicRummyUseCaseDiagram.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>New Basic Rummy Game Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play a new Basic Rummy game, so that I can play a new Basic Rummy card game.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Shuffle Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a dealer-player, I should be able to shuffle the cards so that I can make sure that cards are mixed.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Deal Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a dealer-player, I should be able to deal similar sized hand of cards to players, so that I can ensure that everyone has got similar number of cards.</p>
+							<h5><u>Notes:</u></h5>
+							<ul>
+								<li>In a two player game, each player is dealt a hand of ten cards. Seven cards each are dealt if there are three or four players, and when five or six play each player gets six cards.</li>
+								<li>The cards are dealt one at a time.</li>
+							</ul>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Start the Discard Pile Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, after the deal I should be able to place the next card face up on the table to start the discard pile, so that I can start the discard pile.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Place Drawing Stack Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to place the remainder of the deck face down, so that I can place the remainder of the deck to serve as a ‘pool’ or drawing stack.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Sort the Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to sort the cards, so that I can arrange my cards in a order.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Play Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to play the game to dispose of all the cards in my hand, so that I can play Basic Rummy.</p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">There are three ways to play the cards as follows:</p>
+							<ol>
+								<li>Melding</li>
+								<li>Laying off</li>
+								<li>Discarding</li>
+							</ol>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Meld Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to meld the cards, so that I can get rid of cards.</p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">Melding is taking a combination of cards from hand, and placing it face up on the table, where it stays. There are two kinds of combination which can be melded:</p>
+							<ol>
+								<li>Sequences (also known as runs)</li>
+								<li>Groups (also known as sets or books)</li>
+							</ol>						
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Meld Cards - Groups Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to meld the cards- Group wise, so that I can get rid of cards using melding.</p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">A group, set or book is three or four cards of the same rank.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Meld Cards - Sequences Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to meld the cards- Sequences wise, so that I can get rid of cards using melding.</p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">A sequence or run consists of three or more cards of the same suit in consecutive order.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Lay off Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to lay-off the cards, so that I can get rid of cards.</p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">Laying off is adding a card or cards from hand to a meld already on the table.</p>
+							<h5><u>Acceptance Criteria:</u></h5>
+							<p align="justify">The cards added to a meld must make another valid meld.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Discard Cards Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, I should be able to discard cards, so that I can get rid of one card at the end of  each turn. </p>
+							<h5><u>Notes:</u></h5>
+							<p align="justify">Discarding is playing a card from your hand on top of the discard pile.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Make a New Pool Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, if the stockpile has run out and the next player does not want to take the discard, I should be able to turn over the discard pile without shuffling to form a new stock, so that I can continue the play.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>Going-out Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, if I get rid of the last card, I should be able to go out (win the game), so that I can be the winner.</p>
+						</div>
+						<br/>
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<strong>View Scores Use Case</strong>
+							</div>
+						</div>
+						<div class="panel-body">
+							<p align="justify">As a player, once the game ended I should be able to view the scores of players, so that I can improve playing Basic Rummy card game.</p>
+							<p align="justify">Once the game is ended two options should pop-up,</p>
+							<ul>
+								<li>Quit</li>
+								<li>View scores</li>
+							</ul>
+						</div>
+						<br/>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

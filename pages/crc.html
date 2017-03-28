@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">4.1. CRC Cards</h1>
+                    </div>
+					<div>
+						<p align="justify">CRC card are used to assign responsibilities to various classes for various use cases.</p>
+						<ul>
+							<li>Class CardGameSystem</li>
+						</ul>
+						<p align="justify">Boundary objects - Component parts of the CardGameSystem:</p>
+						<ul>
+							<li>Class CardGameSystem</li>
+							<li>LoginPanel</li>
+							<li>Registration</li>
+							<li>UserLogin</li>
+							<li>GuestLogin</li>
+							<li>MainMenuPanel</li>
+							<li>GameServer</li>
+							<li>GameMenuPanel</li>
+							<li>SwitchGamePanel</li>
+							<li>BasicRummyGamePanel</li>
+						</ul>
+						<p align="justify">Controller objects corresponding to various use cases:</p>
+						<ul>
+							<li>SwitchGamePlay</li>
+							<li>RummyGamePlay</li>
+							<li>DrawCardsSwitch</li>
+							<li>DrawCardsRummy</li>
+						</ul>
+						<p align="justify">Entity objects that is necessary to assign responsibilities to other objects:</p>
+						<ul>
+							<li>User</li>
+							<li>Score</li>
+							<li>DiscardPile</li>
+							<li>DrawingStack</li>
+							<li>Layoff</li>
+							<li>Meld</li>
+							<li>Hand</li>
+							<li>Deck</li>
+						</ul>
+						<hr/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class CardGameSystem</strong>
+                        </div>						
+                        <!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Provide access to component parts of the Game system.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						</br>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class LoginPanel</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Display login options accept a choice from keyboard.</td>
+												<td>UserLogin</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>GuestLogin</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Registration</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to enter registration details through key board.</td>
+												<td>User</td>
+											</tr>
+											<tr>
+												<td>Verify user details.</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Send a email to user upon the registration.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class UserLogin</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to enter user credentials through key board.</td>
+												<td>User</td>
+											</tr>
+											<tr>
+												<td>Verify the user credentials.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class GuestLogin</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to enter user name through key board.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class MainMenuPanel</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Display main menu options and accept a choice from the keyboard.</td>
+												<td>GameServer</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>GameMenuPanel</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class GameServer</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Display server types and accept a choice from keyboard.</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Allowing to enter username and accept the response from keyboard.</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Display the server connection options.</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Initiate connection to players.</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Terminate connections.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class GameMenuPanel</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Select a game type</td>
+												<td>SwitchGamePanel</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>BasicRummyGamePanel</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class SwitchGamePanel</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to play Switch</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class BasicRummyGamePanel</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to play Basic Rummy</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class SwitchGamePlay</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Act according to the game rules.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class RummyGamePlay</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Act according to the game rules.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class User</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Store User details</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Score</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Store the scores of users.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Deal</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to enter number of players through keyboard.</td>
+												<td>Deck</td>
+											</tr>
+											<tr>
+												<td>Deal cards equally among players.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Deck</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Representing the suits and values of 52 cards in the standard card deck.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Hand</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Sort the cards according to suit and value</td>
+												<td>Deck</td>
+											</tr>
+											<tr>
+												<td>Allow to draw cards.</td>
+												<td>DrawCardsRummy</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class DrawCardsRummy</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to select an option to get rid of cards.</td>
+												<td>Hand</td>
+											</tr>
+											<tr>
+												<td>Allow to discard cards</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class Meld</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to meld cards group wise or sequence wise.</td>
+												<td>Hand</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class LayOff</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to lay-off cards.</td>
+												<td>Meld</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>Hand</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class DrawingStack</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to place remainder of the deck face down after starting the discard pile in RummyGamePlay.</td>
+												<td>Deck</td>
+											</tr>
+											<tr>
+												<td>Allow to place remainder of the deck face down after the deal in SwitchGamePlay.</td>
+												<td>DiscardPile</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>RummyGamePlay</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>SwitchGamePlay</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>Deal</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class DiscardPile</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Allow to reveal the top most card from DrawingStack in RummyGamePlay.</td>
+												<td>Deck</td>
+											</tr>
+											<tr>
+												<td>Allow to select next card after the deal from deck in SwitchGamePlay.</td>
+												<td>DrawingStack</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>RummyGamePlay</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>SwitchGamePlay</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>Deal</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Class DrawCardsSwitch</strong>
+                        </div>						
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Responsibilities</th>
+												<th>Collaborators</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Should allow to draw any single card.</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
+							</div>
+						</div>
+                        <!-- /.panel-body -->
+						<br/>
+						
+                    </div>
+					</div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

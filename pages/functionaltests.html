@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">3.2. Initial Functional Tests</h1>
+                    </div>
+					<div>
+						<h3>GENERAL TEST CASES</h3>
+						<div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Use Case</th>
+                                            <th>Function Being Tested</th>
+                                            <th>Initial System State</th>
+                                            <th>Input</th>
+											<th>Expected Output</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Login</td>
+                                            <td>A user should be able to select an option to login to the game system. Options are:  User Login, Guest Login and Register.</td>
+                                            <td>System off</td>
+                                            <td>Click on buttons:User Login, Guest Login and Register.</td>
+											<td>Should go to User Login, Guest Login and Register screens on the relevant button clicks.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>User Login</td>
+                                            <td>A registered user should be able to login to the game system.</td>
+                                            <td>User haven’t logged in</td>
+                                            <td>Registered username and password</td>
+											<td>After a successful login, a player should be directed to the Main menu page.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Guest Login</td>
+                                            <td>A non-registered user should be able to log in to the system.</td>
+                                            <td>User haven’t logged in</td>
+                                            <td>Username</td>
+											<td>After a successful login, a player should be directed to the Main menu page.</td>
+                                        </tr>
+										<tr>
+                                            <td>Validate Login - Guest Login</td>
+                                            <td>Username given must be unique and shouldn’t be conflict with already existing registered username.</td>
+                                            <td>User haven’t logged in</td>
+                                            <td>Username</td>
+											<td>After a successful login, a player should be directed to the Main menu page.</td>
+                                        </tr>
+										<tr>
+                                            <td>Validate Login - User Login</td>
+                                            <td>Password should be equal to the password given for the registered username and username should be a valid one.</td>
+                                            <td>User haven’t logged in</td>
+                                            <td>Registered username and password</td>
+											<td>After a successful login, a player should be directed to the Main menu page.</td>
+                                        </tr>
+										<tr>
+                                            <td>Register</td>
+                                            <td>A user should be able to register himself/herself.</td>
+                                            <td>User haven’t registered</td>
+                                            <td>Username, Password, Confirm password, Email</td>
+											<td>A success pop-up message should show up and should be redirected to login page.</td>
+                                        </tr>
+										<tr>
+                                            <td>Register</td>
+                                            <td>A user should receive a confirmation email for a successful registration.</td>
+                                            <td>User haven’t registered</td>
+                                            <td>Username, Password, Confirm password, Email</td>
+											<td>A confirmation email to users provided email address.</td>
+                                        </tr>
+										<tr>
+                                            <td>Register</td>
+                                            <td>Provided username should be unique.</td>
+                                            <td>User haven’t registered</td>
+                                            <td>Username</td>
+											<td>A tick in-front of the field after validating</td>
+                                        </tr>
+										<tr>
+                                            <td>Register</td>
+                                            <td>Email should be a valid email address.</td>
+                                            <td>User haven’t registered</td>
+                                            <td>Email</td>
+											<td>A tick in-front of the field after validating</td>
+                                        </tr>
+										<tr>
+                                            <td>Start Game</td>
+                                            <td>A user should be able to start the game by connecting with server.</td>
+                                            <td>User logged in</td>
+                                            <td>Server name, Username</td>
+											<td>Should go to select game screen.</td>
+                                        </tr>
+										<tr>
+                                            <td>Host Server</td>
+                                            <td>A user should be able to host a game.</td>
+											<td>User logged in</td>
+                                            <td>Server name, Username</td>
+                                            <td>Should go to select game screen.</td>
+                                        </tr>
+										<tr>
+                                            <td>Join Server</td>
+                                            <td>A should be able to join a game.</td>
+                                            <td>User logged in</td>
+                                            <td>Server name, Username</td>
+                                            <td>Should go to select game screen.</td>
+                                        </tr>
+										<tr>
+                                            <td>Play Game</td>
+                                            <td>A user should be able to select an option to play to a card game. Options are:  Play Switch,Play Basic Rummy</td>
+                                            <td>User joined a server</td>
+                                            <td>Click on buttons: Play Switch, Play Basic Rummy</td>
+											<td>Should go to Play Switch or Play Basic Rummy screens on the relevant button clicks.</td>
+                                        </tr>
+										<tr>
+                                            <td>Play Switch</td>
+                                            <td>A user should be able to play Switch card game</td>
+                                            <td>User on the select game screen</td>
+                                            <td>Click on button:
+Play Switch</td>
+											<td>Should be directed to the Switch game screen.</td>
+                                        </tr>
+										<tr>
+                                            <td>Play Basic Rummy</td>
+                                            <td>A user should be able to play Basic Rummy card game.</td>
+                                            <td>User on the select game screen</td>
+                                            <td>Click on button:
+Play Basic Rummy</td>
+											<td>Should be directed to the Basic Rummy game screen.</td>
+                                        </tr>
+										<tr>
+                                            <td>Exit Game</td>
+                                            <td>Should be able to exit the game.</td>
+                                            <td>User logged in</td>
+                                            <td>Click on Exit button:
+At the end of a game,
+In the main menu</td>
+											<td>Should be disconnected from the server and system should go down.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+							<br/>
+							<div>
+								<h3>TEST CASES FOR SWITCH CARD GAME PLAY</h3>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th>Use Case</th>
+												<th>Function Being Tested</th>
+												<th>Initial System State</th>
+												<th>Input</th>
+												<th>Expected Output</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>New Switch Game use case</td>
+												<td>A user should be able to play a new Switch game.</td>
+												<td>User on the Switch game screen</td>
+												<td>Click on button: New Switch Game</td>
+												<td>Go to Switch Game play screen</td>
+											</tr>
+											<tr>
+												<td>Deal cards use case</td>
+												<td>A dealer - player should be able to deal similar sized hand of cards to other users.</td>
+												<td>User on the Switch Game play screen</td>
+												<td>Number of players
+Click on button: Deal</td>
+												<td>Everyone should get similar number of cards</td>
+											</tr>
+											<tr>
+												<td>Place Drawing Stack use case</td>
+												<td>Game system should be able to create a drawing stack just after the dealt.</td>
+												<td>Dealt cards</td>
+												<td>Click on button: Create Drawing Stack</td>
+												<td>Creation of drawing stack.</td>
+											</tr>
+											<tr>
+												<td>Start the discard pile use case</td>
+												<td>Should be able to reveal the top most card from the drawing stack</td>
+												<td>Created drawing stack</td>
+												<td>Click on button: Discard Pile</td>
+												<td>Revealed the top most card from drawing stack.</td>
+											</tr>
+											<tr>
+												<td>Validate Start Card is Not an ‘Ace’ use case</td>
+												<td>Game system should be able to validate, “starting card” is not an Ace.</td>
+												<td>Revealed the top most card from drawing stack.</td>
+												<td>Click on button: Discard Pile</td>
+												<td>If the "starting card" is an Ace, cards shall continue to be selected from the pool until a non-Ace card is revealed.</td>
+											</tr>
+											<tr>
+												<td>Play Cards use case</td>
+												<td>A user should be able to play cards.</td>
+												<td>Started discard pile</td>
+												<td>Select a card from the hand by Click on buttons: Draw card, Play Ace</td>
+												<td>Can play the turn</td>
+											</tr>
+											<tr>
+												<td>Draw Cards use case</td>
+												<td>A user should be able to draw a single card from the deck</td>
+												<td>Started discard pile</td>
+												<td>Click on button: Draw card</td>
+												<td>Can play the turn</td>
+											</tr>
+											<tr>
+												<td>Play Ace use case</td>
+												<td>A user should be able to play Ace regardless of the suit or value of the topmost card on the playing deck.</td>
+												<td>Started discard pile</td>
+												<td>Click on button: Play Ace</td>
+												<td>Can play Ace</td>
+											</tr>
+											<tr>
+												<td>Play Ace use case</td>
+												<td>After playing ‘Ace’, play should continue as normal, but on the suit selected by the player of the Ace.</td>
+												<td>Played Ace</td>
+												<td>Click on button: Draw card</td>
+												<td>Can play the turn</td>
+											</tr>
+											<tr>
+												<td>Make a New Pool use case</td>
+												<td>A user should be able to make a new drawing stack.</td>
+												<td>Game playing</td>
+												<td>Click on button: Create Drawing Stack</td>
+												<td>Form a new drawing stack.</td>
+											</tr>
+											<tr>
+												<td>End Game use case</td>
+												<td>A user should be able to end the game</td>
+												<td>Game playing</td>
+												<td>Click on button: End game</td>
+												<td>Should redirect back to the main menu page.</td>
+											</tr>
+											<tr>
+												<td>End Game use case</td>
+												<td>If the last card is a power card they must draw another card.</td>
+												<td>Game playing</td>
+												<td>Click on button: End game</td>
+												<td>Should show a Error message -Game can not end with an power card. I.e. Power cards/ Trick cards: 2, 8, King, Black Jack, Red Jack, Ace</td>
+											</tr>
+											<tr>
+												<td>View Score use case</td>
+												<td>Once the game ended should be able to view the scores of players.</td>
+												<td>Game end</td>
+												<td>Click on button: View Scores</td>
+												<td>Scores of users should show in a pop-up screen.</td>
+											</tr>
+											</tbody>
+									</table>
+								</div>
+								<br/>
+							<div>
+								<h3>TEST CASES FOR BASIC RUMMY CARD GAME PLAY</h3>
+								<div class="table-responsive">
+									<table class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th>Use Case</th>
+												<th>Function Being Tested</th>
+												<th>Initial System State</th>
+												<th>Input</th>
+												<th>Expected Output</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>New Basic Rummy Game use case</td>
+												<td>A user should be able to play a new Basic Rummy Game</td>
+												<td>User on the Basic Rummy game screen</td>
+												<td>Click on button: New Basic Rummy Game</td>
+												<td>Go to Basic Rummy Game play screen.</td>
+											</tr>
+											<tr>
+												<td>Deal Cards use case</td>
+												<td>A dealer - player should be able to deal similar sized hand of cards to other users.</td>
+												<td>User on the Basic Rummy Game play screen</td>
+												<td>Number of players
+Click on button: Deal</td>
+												<td>Everyone should get similar number of cards.</td>
+											</tr>
+											<tr>
+												<td>Deal Cards use case</td>
+												<td>Cards should be dealt on at a time.</td>
+												<td>User on the Basic Rummy  Game play screen</td>
+												<td>Number of players
+Click on button: Deal</td>
+												<td>Everyone should get one card at a deal turn.</td>
+											</tr>
+											<tr>
+												<td>Start the Discard Pile</td>
+												<td>A user should be able to place the next card face up on the table to start the discard pile</td>
+												<td>Dealt cards</td>
+												<td>Click on button: Discard Pile</td>
+												<td>Place the next card of deck face up.</td>
+											</tr>
+											<tr>
+												<td>Place Drawing Stack</td>
+												<td>Game system should be able to create a drawing stack after starting the discard pile.</td>
+												<td>Started discard pile</td>
+												<td>Click on button: Create Drawing Stack</td>
+												<td>Creation of drawing stack.</td>
+											</tr>
+											<tr>
+												<td>Sort the Cards</td>
+												<td>A user should be able to sort the cards.</td>
+												<td>Placed drawing stack</td>
+												<td>Click on button: Sort cards</td>
+												<td>Cards get sorted according to ranks and suits.</td>
+											</tr>
+											<tr>
+												<td>Play Cards</td>
+												<td>A user should be able to play the game.</td>
+												<td>Cards sorted</td>
+												<td>Click on buttons: Meld cards, Lay-off cards, Discard cards</td>
+												<td>Meld cards, Lay-off cards and Discard cards buttons should be clickable.</td>
+											</tr>
+											<tr>
+												<td>Meld Cards</td>
+												<td>A user should be able to meld the cards.</td>
+												<td>Cards sorted</td>
+												<td>Click on buttons: Group Melding, Sequence Melding</td>
+												<td>A combination of cards should place face up.</td>
+											</tr>
+											<tr>
+												<td>Meld Cards - Groups</td>
+												<td>A user should be able to meld the cards- Group wise.</td>
+												<td>Cards sorted</td>
+												<td>Click on button: Group Melding.</td>
+												<td>Three or four cards of the same rank should face up.</td>
+											</tr>
+											<tr>
+												<td>Meld Cards - Sequences</td>
+												<td>A user should be able to meld the cards- Sequence wise.</td>
+												<td>Cards sorted</td>
+												<td>Click on button: Sequence Melding.</td>
+												<td>Three or more cards of the same suit in consecutive order should face up.</td>
+											</tr>
+											<tr>
+												<td>Lay off Cards</td>
+												<td>A user should be able to lay-off the cards.</td>
+												<td>Cards sorted</td>
+												<td>Click on button: Lay-off cards</td>
+												<td>A card or cards from hand should be faced up to a meld already face up.</td>
+											</tr>
+											<tr>
+												<td>Lay off Cards</td>
+												<td>Cards added to a meld by layoff must make another valid meld.</td>
+												<td>Cards sorted</td>
+												<td>Click on button: Lay-off cards</td>
+												<td>A card or cards from hand should be faced up to a meld already face up.</td>
+											</tr>
+											<tr>
+												<td>Discard Cards</td>
+												<td>A user should be able to lay-off the cards.</td>
+												<td>Cards sorted</td>
+												<td>Click on button: Discard cards</td>
+												<td>A card on top of the discard pile should face up.</td>
+											</tr>
+											<tr>
+												<td>Make a New Pool</td>
+												<td>A user should be able to turn over the discard pile without shuffling to form a new stock, so that I can continue the play.</td>
+												<td>Game playing</td>
+												<td>Click on button: Create a drawing stack</td>
+												<td>Form a new drawing stack.</td>
+											</tr>
+											<tr>
+												<td>Going-out</td>
+												<td>A user should be able to go out once get rid of the last card.</td>
+												<td>Game playing</td>
+												<td>Click on button: End game</td>
+												<td>Should redirect back to the main menu page.</td>
+											</tr>
+											<tr>
+												<td>View Scores</td>
+												<td>Once the game ended should be able to view the scores of players.</td>
+												<td>Game end</td>
+												<td>Click on button: View Scores</td>
+												<td>Scores of users should show in a pop-up screen.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<br/>
+					</div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

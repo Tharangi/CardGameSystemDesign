@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>An Example of Object-Oriented Design: Card Game</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="intro.html">Card Game System Design</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                    
+                        <li>
+                            <a href="intro.html"><i class="fa fa-info-circle fa-fw"></i> Introduction</a>
+                        </li>
+						<li>
+                            <a href="requirements.html"><i class="fa fa-file-text-o fa-fw"></i> Requirements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Analysis<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Use Cases<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li><a href="usecases.html">General</a></li>
+										<li><a href="switchusecase.html">Switch</a></li>
+										<li><a href="rummyusecase.html">Basic Rummy</a></li>
+									</ul>
+                                </li>
+                                <li>
+                                    <a href="functionaltests.html">Initial Functional Tests</a>
+                                </li>
+								<li>
+                                    <a href="analysisclasses.html">Analysis Classes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-pencil-square fa-fw"></i> Design<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="crc.html">CRC Cards</a>
+                                </li>
+                                <li>
+                                    <a href="classdiag.html">Class Diagrams</a>
+                                </li>
+								<li>
+                                    <a href="statecharts.html">State Charts</a>
+                                </li>
+								<li>
+                                    <a href="interaction.html">Interaction Diagrams</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+							<a href="#"><i class="fa fa-wrench fa-fw"></i> Detailed Design<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="detaileddesign.html">Detailed Design</a>
+                                </li>
+                                <li>
+                                    <a href="pkgdiag.html">Package Diagram</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+						</li>
+						<li>
+							<a href="about.html"><i class="fa fa-users fa-fw"></i> About</a>
+						</li>
+                        <li>
+							<p align="center">© Team NoNameYet 2017.</p>
+						</li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">4.4. Interaction Diagrams</h1>
+						<br/>
+						<p align="justify">You can find interaction diagrams for major use cases of the interaction diagram as follows:</p>
+						<br/>
+						<h4>REGISTER WITH THE CARD GAME SYSTEM</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/register.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.1, View full size image<a href="img/register.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>USER LOGIN TO THE CARD GAME SYSTEM</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/login.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.2, View full size image<a href="img/login.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>GUEST LOGIN TO THE CARD GAME SYSTEM</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/Guestlogin.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.3, View full size image<a href="img/Guestlogin.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>SWITCH GAME SHUFFLE, START DISCARD PILE AND PLACE DRAWING STACK</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/SwitchIntial2.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.4, View full size image<a href="img/SwitchIntial2.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>SWITCH GAME PLAY CARDS</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/xxxxxxxx.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.5, View full size image<a href="img/xxxxxxxx.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>SWITCH GAME CREATING NEW DRAWING STACK</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/SwitchNewDrawingStack(1).png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.6, View full size image<a href="img/SwitchNewDrawingStack(1).png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>SWITCH GAME END</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/SwitchEnd.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.7, View full size image<a href="img/SwitchEnd.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>BASIC RUMMY GAME SHUFFLE, START DISCARD PILE AND PLACE DRAWING STACK</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/RummyInitial.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.8, View full size image<a href="img/RummyInitial.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>BASIC RUMMY GAME CREATING NEW DRAWING STACK</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/RummyNewDrawingStack.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.9, View full size image<a href="img/RummyNewDrawingStack.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+						<h4>BASIC RUMMY GAME END</h4>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="thumbnail">
+									<img src="img/RummyEnd.png" class="img-responsive img-thumbnail center-block" />
+									<div class="caption">
+										<p align="center">(Image 4.4.10, View full size image<a href="img/RummyEnd.png"> here</a>.)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br/>
+						
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+		
+	<footer class="footer">
+      <div class="container">
+        <p align="center">© Team NoNameYet 2017. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
